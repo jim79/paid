@@ -24,6 +24,28 @@
         
 
         <section class="cards-grid">
+            {% for item in site.data.resources %}
+                    {% if item.file %}
+                        <div class="download-section card">
+                            <h2 class="file-title">
+                                {{ item.file | split: '/' | last | split: '.' | first }}
+                            </h2>
+
+                            {% if item.desc %}
+                                <div>{{ item.desc | markdownify }}</div>
+                            {% endif %}
+
+                            <a href="{{ item.file }}" download class="download-btn">
+                                Open
+                            </a>
+
+                            <!-- {% if item.offi %}
+                                <div class="offi"> <a href="{{ item.offi }}">Official Link</a> </div>
+                            {% endif %} -->
+
+                        </div>
+                    {% endif %}
+            {% endfor %}
             {% for item in site.data.forms %}
                     {% if item.file %}
                         <div class="download-section card">
@@ -39,6 +61,10 @@
                                 Download
                             </a>
 
+                            {% if item.offi %}
+                                <div class="offi"> <a href="{{ item.offi }}">Official Link</a> </div>
+                            {% endif %}
+
                         </div>
                     {% endif %}
             {% endfor %}
@@ -46,7 +72,7 @@
     </div>
 
     <footer>
-        <p style="font-size: xx-small; text-align: right; padding: 0; margin: 0;">Made by jcm236</p>
+        <p style="font-size: 0.6rem; text-align: right; padding: 0; margin: 0;">Made by jcm236</p>
     </footer>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script>
