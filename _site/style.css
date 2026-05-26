@@ -1,0 +1,90 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #1e6bd6;
+    color: #fff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+header h1, header h2 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e6bd6;
+    color: #fff;
+    /* position: relative; */
+    bottom: 0;
+    margin: 0;
+    /* width: 100%; */
+}
+
+/* .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+    align-items: start; 
+} */
+.cards-grid {
+    padding: 20px;
+}
+
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+
+    width: 260px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+
+    gap: 10px;
+    height: auto;
+    align-self: start;
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.file-title {
+    margin: 0%;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.download-btn {
+    margin-top: 5%;
+    display: inline-block;
+    text-align: center;
+
+    padding: 8px 10px;
+    background: #1e6bd6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
+
